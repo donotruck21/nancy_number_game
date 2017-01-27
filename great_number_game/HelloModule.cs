@@ -5,7 +5,10 @@ namespace HelloNancy
     {
         public HelloModule()
         {
-            Get("/", args => "Hello Nancy!");
+            Get("/", args => {
+                return View["Hello"];
+            });
+            Get("/{name}", args => $"Hello {args.name}");
         }
     }
 }
