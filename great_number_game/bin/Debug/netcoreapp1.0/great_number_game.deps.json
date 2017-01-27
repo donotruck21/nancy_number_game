@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "8c849342b91e24c17da8edfa02d6dd4d7c854f4e"
+    "signature": "f5a5e97e39c597e67d6e9becb2cd8a73ee83d55d"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,10 +10,19 @@
         "dependencies": {
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.AspNetCore.Owin": "1.0.0",
-          "Nancy": "2.0.0-barneyrubble"
+          "Nancy": "2.0.0-barneyrubble",
+          "Microsoft.Extensions.Logging.Console": "1.0.0",
+          "Nancy.Session.InMemory": "0.9.1-pre",
+          "Nancy.Session.Persistable": "0.9.1-pre",
+          "FSharp.Core": "4.0.1.7-alpha"
         },
         "runtime": {
           "great_number_game.dll": {}
+        }
+      },
+      "FSharp.Core/4.0.1.7-alpha": {
+        "runtime": {
+          "lib/netstandard1.6/FSharp.Core.dll": {}
         }
       },
       "Microsoft.AspNetCore.Hosting/1.0.0": {
@@ -209,6 +218,15 @@
           "lib/netstandard1.1/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Console/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.Logging.Console.dll": {}
+        }
+      },
       "Microsoft.Extensions.ObjectPool/1.0.0": {
         "runtime": {
           "lib/netstandard1.3/Microsoft.Extensions.ObjectPool.dll": {}
@@ -253,6 +271,22 @@
         },
         "runtime": {
           "lib/netstandard1.6/Nancy.dll": {}
+        }
+      },
+      "Nancy.Session.InMemory/0.9.1-pre": {
+        "dependencies": {
+          "Nancy": "2.0.0-barneyrubble"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Nancy.Session.InMemory.dll": {}
+        }
+      },
+      "Nancy.Session.Persistable/0.9.1-pre": {
+        "dependencies": {
+          "Nancy": "2.0.0-barneyrubble"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Nancy.Session.Persistable.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
@@ -328,6 +362,11 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FSharp.Core/4.0.1.7-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y/ibFVeeXLA+wdNXfwgjGpoJyq33S0x49kRsQLuwkhDuWPNz0qeIrf83a80yZhfQVOAdLjA7JieG+xGje832Ng=="
     },
     "Microsoft.AspNetCore.Hosting/1.0.0": {
       "type": "package",
@@ -439,6 +478,11 @@
       "serviceable": true,
       "sha512": "sha512-wHT6oY50q36mAXBRKtFaB7u07WxKC5u2M8fi3PqHOOnHyUo9gD0u1TlCNR8UObHQxKMYwqlgI8TLcErpt29n8A=="
     },
+    "Microsoft.Extensions.Logging.Console/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GN4gFFONP12KbFEG9rNFpXuz6D2Tybcm8+c1wilaQ1eSl9zVX0gVRrKw/YRwxdwbM3eK7nWfRRqJaQPzOjtLnA=="
+    },
     "Microsoft.Extensions.ObjectPool/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -468,6 +512,16 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ffOBZdJd+uiI1J+tOGdjL6+YUyque8OrX4CeXT8DHJQORlPNOFww1KskXtaW20OGefaSXf1LGh07XDGQyH4iQQ=="
+    },
+    "Nancy.Session.InMemory/0.9.1-pre": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yHO0adD1I02KB85GGTpOYruOpU2KXleUbiWbmZGbhemjblAjFJYeoz4vSBwvG6MqjQJzT1x58xJ9odD5KW9FTw=="
+    },
+    "Nancy.Session.Persistable/0.9.1-pre": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ym9P+MTQMUtdGOp0wqmu5OZ4yxbKF2FpLrFFD8x80RvaonusbaXStMcqSk4Gw5LjcMnjVWf/ovcADXDl5mWNUg=="
     },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",

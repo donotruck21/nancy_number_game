@@ -6,9 +6,12 @@ namespace HelloNancy
         public HelloModule()
         {
             Get("/", args => {
-                return View["Hello"];
+                Session["SomeName"] = "Some stuff!";
+                ViewBag.hello = Session["SomeName"];
+                return View["index"]; 
             });
-            Get("/{name}", args => $"Hello {args.name}");
+
+            Get("/{name}", args => $"Hello {args.name}"); 
         }
     }
 }
