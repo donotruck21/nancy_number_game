@@ -12,12 +12,70 @@
             margin: 0 auto;
         }
         .container{
-            width: 600px;
+            width: 900px;
+        }
+        h1{
+            margin: 30px 0;
+        }
+        .box{
+            display: inline-block;
+            width: 150px;
+            height: 130px;
+            border: 2px solid black;
+            padding-top: 50px;
+            margin-top: 20px;
+        }
+        .log{
+            width: 500px;
+            height: 150px;
+            overflow: auto;
+            border: 1px solid black;
+            margin-top: 40px;
         }
     </style>
     <body>
         <div class="container">
             <h1>Ninja Gold</h1>
+            <h3>Total Gold: @ViewBag.total_gold</h3>
+
+            <div class="box">
+                <h4>Farm</h4>
+                <p>earns 10-20 gold</p>
+                <form action="/process" method="post">
+                    <input type="hidden" name="building" value="farm">
+                    <input type="submit" value="Gold">
+                </form>
+            </div>
+
+            <div class="box">
+                <h4>House</h4>
+                <p>earns 5-10 gold</p>
+                <form action="/process" method="post">
+                    <input type="hidden" name="building" value="house">
+                    <input type="submit" value="Gold">
+                </form>
+            </div>
+
+            <div class="box">
+                <h4>Cave</h4>
+                <p>earns 2-5 gold</p>
+                <form action="/process" method="post">
+                    <input type="hidden" name="building" value="cave">
+                    <input type="submit" value="Gold">
+                </form>
+            </div>
+
+            <div class="box">
+                <h4>Casino</h4>
+                <p>earns +/-50 gold</p>
+                <form action="/process" method="post">
+                    <input type="hidden" name="building" value="casino">
+                    <input type="submit" value="Gold">
+                </form>
+            </div>
+            <div class="log">
+                <p>@ViewBag.activity</p>
+            </div>
         </div>
     </body>
 </html>
