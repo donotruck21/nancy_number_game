@@ -1,5 +1,5 @@
 using Nancy;
-using System;
+// using System;
 namespace HelloNancy
 {
     public class NinjagoldModule : NancyModule
@@ -9,7 +9,7 @@ namespace HelloNancy
         {
             Get("/", args => {
                 System.Console.WriteLine("in root");
-                
+
                 return View["index"]; 
             });
         }
