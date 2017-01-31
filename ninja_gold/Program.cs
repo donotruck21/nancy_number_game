@@ -1,12 +1,17 @@
-﻿using System;
-
-namespace ConsoleApplication
+﻿using System.IO;
+using Microsoft.AspNetCore.Hosting;
+namespace HelloNancy
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IWebHost host = new WebHostBuilder()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseKestrel()
+                .UseStartup<Startup>()
+                .Build();
+            host.Run();
         }
     }
 }
